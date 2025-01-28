@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Almarai", sans-serif;
+    flex-direction: column;
+    background-color: rgb(240, 240, 240);
+    text-align: center;
+}
+
+label {
+    font-size: 18px;
+    margin-right: 10px;
+    font-weight: 700;
+}
+
+#datesMenu {
+    font-size: 16px;
+    margin: 30px 0 15px 0;
+    outline: none;
+    padding: 4px;
+}
+
+h2 {
+    color: rgb(92, 27, 119);
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+p {
+    font-weight: 525;
+}
+
+#timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 50px;
+    gap: 10px;
+    text-align: center;
+}
+
+.number {
+    font-size: 5em;
+    background-color: rgb(67, 49, 74);
+    color: white;
+    font-family: "Almarai", sans-serif;
+    border-radius: 8px;
+    padding: 30px 5px;
+    font-weight: bold;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, .5);
+}
+
+.labels {
+    background-color: rgb(45, 37, 46);
+    color: white;
+    padding: 5px 0;
+    margin-top: 2px;
+    border-radius: 2px;
+}
+
+@media (max-width: 376px) {
+    .number {
+        font-size: 4.6em;
+    }
+}
+
+@media (max-width: 360px) {
+    h2 {
+        font-size: 23px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    #timer {
+        margin-top: 30px;
+    }
+    
+    .number {
+        font-size: 3.8em;
+    }
+}
+
+/* 344px */
