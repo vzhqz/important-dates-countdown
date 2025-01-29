@@ -1,4 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+:root {
+    --body-background: rgb(240, 240, 240);
+    --header-color: rgb(92, 27, 119);
+    --numbers-background: rgb(67, 49, 74);
+    --labels-background: rgb(45, 37, 46);
+    --darkmode-background: rgb(50, 50, 50);
+    --darkmode-color: rgb(163, 34, 218);
+    --shadow-color: rgba(0, 0, 0, .5);
+}
+
+.darkMode {
+    --body-background: rgb(45, 45, 45);
+    --body-color: rgb(240, 240, 240);
+    --header-color: rgb(153, 46, 200);
+    --numbers-background: rgb(79, 53, 89);
+    --labels-background: rgb(59, 46, 61);
+    --darkmode-background: rgb(220, 220, 220);
+    --darkmode-color: rgb(92, 27, 119);
+    --shadow-color: rgba(129, 58, 165, .4);
+}
 
 * {
     padding: 0;
@@ -12,7 +32,8 @@ body {
     align-items: center;
     font-family: "Almarai", sans-serif;
     flex-direction: column;
-    background-color: rgb(240, 240, 240);
+    background-color: var(--body-background);
+    color: var(--body-color);
     text-align: center;
 }
 
@@ -30,7 +51,7 @@ label {
 }
 
 h2 {
-    color: rgb(92, 27, 119);
+    color: var(--header-color);
     margin-bottom: 5px;
     font-size: 25px;
 }
@@ -51,30 +72,94 @@ p {
 
 .number {
     font-size: 5em;
-    background-color: rgb(67, 49, 74);
+    background-color: var(--numbers-background);
     color: white;
     font-family: "Almarai", sans-serif;
     border-radius: 8px;
     padding: 30px 5px;
     font-weight: bold;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, .5);
+    box-shadow: 3px 3px 8px var(--shadow-color);
 }
 
 .labels {
-    background-color: rgb(45, 37, 46);
+    background-color: var(--labels-background);
     color: white;
     padding: 5px 0;
-    margin-top: 2px;
+    margin-top: 5px;
     border-radius: 2px;
 }
 
-@media (max-width: 376px) {
+.copyright a{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 12px;
+    color: rgb(89, 88, 88);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#darkModeBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    background-color: var(--darkmode-background);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#darkModeBtn i {
+    color: var(--darkmode-color);
+}
+
+#darkModeBtn i:last-child {
+    display: none;
+}
+
+.darkmode #darkModeBtn i:first-child {
+    display: none;
+}
+
+.darkmode #darkModeBtn i:last-child {
+    display: block;
+    color: var(--darkmode-color);
+}
+
+@media (max-width: 450px) {
     .number {
-        font-size: 4.6em;
+        font-size: 4.5em;
+    }
+
+    #darkModeBtn {
+        position: absolute;
+        top: auto;
+        bottom: 20px;
+        right: 20px;
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
+    .number {
+        font-size: 4em;
+        padding: 26px 5px;
+    }
+    
+    #timer {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 370px) {
     h2 {
         font-size: 23px;
     }
@@ -88,8 +173,26 @@ p {
     }
     
     .number {
-        font-size: 3.8em;
+        font-size: 3.6em;
+        padding: 26px 5px;
     }
 }
 
-/* 344px */
+@media (max-width: 335px) {
+    .number {
+        font-size: 3.4em;
+    }
+}
+
+@media(max-width: 310px) {
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+    .number {
+        font-size: 3.2em;
+    }
+}
