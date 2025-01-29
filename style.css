@@ -126,11 +126,11 @@ p {
     display: none;
 }
 
-.darkmode #darkModeBtn i:first-child {
+.darkMode #darkModeBtn i:first-child {
     display: none;
 }
 
-.darkmode #darkModeBtn i:last-child {
+.darkMode #darkModeBtn i:last-child {
     display: block;
     color: var(--darkmode-color);
 }
